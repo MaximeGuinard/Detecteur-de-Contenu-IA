@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détecteur de Contenu IA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Détecteur de Contenu IA</h1>
+        
+        <div class="input-section">
+            <textarea id="textInput" placeholder="Collez votre texte ici pour l'analyser..."></textarea>
+            <div class="buttons">
+                <button onclick="analyzeText()">Analyser</button>
+                <button onclick="clearText()">Effacer</button>
+            </div>
+        </div>
+
+        <div class="results" id="results">
+            <div class="metrics">
+                <div class="metric-box">
+                    <h3>Probabilité IA</h3>
+                    <div id="aiScore">-</div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-box">
+                    <h3>Diversité du Vocabulaire</h3>
+                    <canvas id="vocabularyDiversityChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3>Structure des Phrases</h3>
+                    <canvas id="sentenceStructureChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3>Mots les Plus Utilisés</h3>
+                    <canvas id="commonWordsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="detailed-results">
+                <h3>Analyse Détaillée</h3>
+                <div id="detailedAnalysis"></div>
+                <div id="recommendations"></div>
+            </div>
+        </div>
+    </div>
+    <script src="detector.js"></script>
+</body>
+</html>
